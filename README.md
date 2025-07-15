@@ -1,7 +1,5 @@
 # StudentManagementSystem
 
-# Student Management System in SQL Server to analyze academic performance using joins, views, procedures, and optimized queries.
-
 ##  Overview
 
 This project simulates a **Student Management System** using SQL Server. It is designed to manage and analyze student data, course enrollments, grades, and academic performance. The goal is to extract useful academic insights that help in identifying top performers, failure rates, and course-wise performance trends.

@@ -57,3 +57,20 @@ JOIN GradesBySemester g2
     AND g1.CourseID = g2.CourseID
     AND g2.SemesterOrder = g1.SemesterOrder + 1
 WHERE g2.Grade > g1.Grade
+
+--5.Calculate GPA Categories (Segmenting students based on GPA)
+SELECT 
+    S.StudentID, 
+    Name,
+    AVG(Grade) AS GPA,
+    CASE 
+        WHEN AVG(Grade) >= 3.5 THEN 'Excellent'
+        WHEN AVG(Grade) BETWEEN 3.0 AND 3.49 THEN 'Good'
+        WHEN AVG(Grade) BETWEEN 2.5 AND 2.99 THEN 'Average'
+        ELSE 'Below Average'
+    END AS GPA_Category
+FROM Students S
+JOIN Enrollments E ON s.StudentID = E.StudentID
+JOIN Grades g ON E.EnrollmentID = E.EnrollmentID
+GROUP BY S.StudentID, Name
+ORDER BY GPA DESC

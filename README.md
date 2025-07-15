@@ -90,9 +90,9 @@ By working through this project, you will practice:
 
 ##  Tech Stack
 
-- 'SQL Server 2019'
-- 'T-SQL (Transact-SQL)'
-- 'SSMS (SQL Server Management Studio)'
+- SQL Server 2019
+- T-SQL (Transact-SQL)
+- SSMS (SQL Server Management Studio
 
 
 ## License

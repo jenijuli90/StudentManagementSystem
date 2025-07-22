@@ -11,10 +11,13 @@ This project was built as a learning exercise to apply SQL concepts such as join
 The database consists of four core tables:
 
 1. **Students** – Contains information about each student  
-   - 'StudentID', 'Name', 'DateOfBirth'
+   - 'Id', 'FirstName', 'LastName', 'Email', 'DateOfBirth' , 'IsActive', 'Address', 'PhoneNumber' , 'CreatedOn', 'UpatedOn'
+  
+2. **Instructors** - Contains information about Instructors
+   - 'Id', 'InstructorName' ,'Department', 'Email', 'IsActive', 'CreatedOn', 'UpatedOn'
 
 2. **Courses** – Contains available courses offered  
-   - 'CourseID', 'CourseName', 'Credits'
+   - 'Id', 'CourseName', 'Credits' , InstructorId', 'IsActive', 'CreatedOn', 'UpdatedOn'
 
 3. **Enrollments** – Tracks which students enrolled in which courses and when  
    - 'EnrollmentID', 'StudentID', 'CourseID', 'EnrollmentDate', 'Semester'

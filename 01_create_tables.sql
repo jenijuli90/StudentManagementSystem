@@ -67,3 +67,15 @@ CREATE TABLE [dbo].[Grades] (
     [GradeDate] DATE NULL,
     CONSTRAINT [PK_Grades] PRIMARY KEY CLUSTERED ([Id] ASC)
 )
+
+--ErrorLog table
+CREATE TABLE [dbo].[ErrorLog] (
+    [ErrorID] INT IDENTITY(1,1) NOT NULL,
+    [UserName] VARCHAR(100) NULL,
+    [ErrorNumber] INT NULL,
+    [ErrorState] INT NULL,
+    [ErrorSeverity] INT NULL,
+    [ErrorMessage] VARCHAR(MAX) NULL,
+    [ErrorDateTime] DATETIME NULL,
+    CONSTRAINT [PK_ErrorLog] PRIMARY KEY CLUSTERED ([ErrorID] ASC)
+) 
